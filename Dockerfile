@@ -1,24 +1,17 @@
 #First reference https://blog.jdriven.com/2021/05/create-a-docker-image-running-robot-framework/
 
 FROM debian:11.6
+#re6exp/debian-jessie-oracle-jdk-8
+#debian:8.11
 #FROM python:3.9.0 
 #FROM python:3.10.0a6-buster
-
-# Install OpenJDK-8
 RUN apt-get update && \
-    apt-get install -y openjdk-8-jdk && \
-    apt-get install -y ant && \
-    apt-get clean;
+    apt-get install -y python3
     
-# Fix certificate issues
 RUN apt-get update && \
-    apt-get install ca-certificates-java && \
-    apt-get clean && \
-    update-ca-certificates -f;
+    apt-get install -y wget
 
-# Setup JAVA_HOME -- useful for docker commandline
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-RUN export JAVA_HOME
+#TODO JAVA jdk 8
 ##_________________________________________________
 
 
