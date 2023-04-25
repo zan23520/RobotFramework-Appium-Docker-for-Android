@@ -3,6 +3,13 @@
 FROM python:3.9.0 
 #FROM python:3.10.0a6-buster
 
+#FROM ubuntu
+#RUN apt-get update
+#RUN apt install -y python3.8
+#RUN apt install -y python3-pip
+#RUN pip3 install robotframework
+#RUN pip3 install robotframework-appium
+
 LABEL name="RobotFramework-Appium Docker build"
 
 MAINTAINER zan23520
